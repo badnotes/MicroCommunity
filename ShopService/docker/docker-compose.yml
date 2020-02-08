@@ -13,13 +13,13 @@ services:
        networks:
        - java110-net
 #       mem_limit: 1024m
-#       extra_hosts:
-#       - "dev.java110.com:192.168.1.18"
-#       - "dev.db.java110.com:192.168.1.18"
-#       - "dev.zk.java110.com:192.168.1.18"
-#       - "dev.kafka.java110.com:192.168.1.18"
-#       - "dev.redis.java110.com:192.168.1.18"
-#       - "api.java110.com:92.168.1.18"
+       extra_hosts:
+       - "dev.java110.com:172.31.35.145"
+       - "dev.db.java110.com:172.31.35.145"
+       - "dev.zk.java110.com:172.31.35.145"
+       - "dev.kafka.java110.com:172.31.35.145"
+       - "dev.redis.java110.com:172.31.35.145"
+       - "api.java110.com:172.31.35.145"
 networks:
   java110-net:
     external: true
