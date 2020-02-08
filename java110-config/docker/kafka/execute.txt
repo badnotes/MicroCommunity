@@ -1,6 +1,6 @@
 docker pull wurstmeister/kafka
 
-docker run -ti --name kafka_test -p2181:2181 -p9092:9092 -idt wurstmeister/kafka:latest
+docker run -ti $(cat /etc/hosts|awk -F ' ' '{if(NR>2){print "--add-host "$2":"$1}}') --name kafka_test -p2181:2181 -p9092:9092 -idt wurstmeister/kafka:latest
 
 
 docker logs -f kafka_test
