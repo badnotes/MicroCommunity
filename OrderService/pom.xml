@@ -56,29 +56,35 @@
             <plugins>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>2.5.5</version>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
                     <version>2.10</version>
-                    <executions>
+                    <configuration>
+                        <artifactItems>
+                            <artifactItem>
+                                <groupId>com.java110</groupId>
+                                <artifactId>java110-config</artifactId>
+                                <version>${microcommunity.version}</version>
+                                <type>jar</type>
+                                <overWrite>true</overWrite>
+                                <outputDirectory>${project.build.directory}/classes</outputDirectory>
+                            </artifactItem>
+                        </artifactItems>
+                    </configuration>
+                    <!--<executions>
                         <execution>
                             <id>unpack</id>
                             <phase>generate-resources</phase>
                             <goals>
                                 <goal>unpack</goal>
                             </goals>
-                            <configuration>
-                                <artifactItems>
-                                    <artifactItem>
-                                        <groupId>com.java110</groupId>
-                                        <artifactId>java110-config</artifactId>
-                                        <version>${microcommunity.version}</version>
-                                        <type>jar</type>
-                                        <overWrite>true</overWrite>
-                                        <outputDirectory>${project.build.directory}/classes</outputDirectory>
-                                    </artifactItem>
-                                </artifactItems>
-                            </configuration>
                         </execution>
-                    </executions>
+                    </executions>-->
                 </plugin>
                 <plugin>
                     <groupId>org.springframework.boot</groupId>

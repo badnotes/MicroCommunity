@@ -6,6 +6,6 @@ cp  -r ../target .
 
 docker build -t java110/fee .
 
-docker run -ti --name fee_test -p8010:8010 -idt java110/fee:latest
+docker run -ti $(cat /etc/hosts|awk -F ' ' '{if(NR>2){print "--add-host "$2":"$1}}') --name fee_test -p8010:8010 -idt java110/fee:latest
 
 docker logs -f fee_test

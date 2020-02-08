@@ -1,5 +1,5 @@
 docker pull redis
 
-docker run -ti --name redis_test -p6379:6379 -idt redis:latest
+docker run -ti $(cat /etc/hosts|awk -F ' ' '{if(NR>2){print "--add-host "$2":"$1}}') --name redis_test -p6379:6379 -idt redis:latest
 
 docker logs -f redis_test

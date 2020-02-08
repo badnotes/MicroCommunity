@@ -4,7 +4,7 @@ spring:
 #      names: ds_master_0,ds_master_1,ds_master_0_slave_0,ds_master_0_slave_1,ds_master_1_slave_0,ds_master_1_slave_1
       names: ds_master_0,ds_master_1
 #      ds_master_0_slave_0:
-#        jdbc-url: jdbc:mysql://localhost:3306/demo_ds_master_0_slave_0?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+#        jdbc-url: jdbc:mysql://localhost:3326/demo_ds_master_0_slave_0?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
 #        password:
 #        type: com.zaxxer.hikari.HikariDataSource
 #        driver-class-name: com.mysql.jdbc.Driver
@@ -12,7 +12,7 @@ spring:
       ds_master_0:
         driver-class-name: com.mysql.jdbc.Driver
         type: com.alibaba.druid.pool.DruidDataSource
-        jdbc-url: jdbc:mysql://dev.db.java110.com:3306/hc_community?useUnicode=true&characterEncoding=utf-8
+        jdbc-url: jdbc:mysql://dev.db.java110.com:3326/hc_community?useUnicode=true&characterEncoding=utf-8
         username: hc_community
         password: hc_community@12345678
         minIdle: 5
@@ -24,7 +24,7 @@ spring:
       ds_master_1:
         driver-class-name: com.mysql.jdbc.Driver
         type: com.alibaba.druid.pool.DruidDataSource
-        jdbc-url: jdbc:mysql://dev.db.java110.com:3306/TT?useUnicode=true&characterEncoding=utf-8
+        jdbc-url: jdbc:mysql://dev.db.java110.com:3326/TT?useUnicode=true&characterEncoding=utf-8
         username: TT
         password: TT@12345678
         minIdle: 5

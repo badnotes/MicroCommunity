@@ -34,7 +34,7 @@ docker build -t java110/docker-mysql .
 ![mysql](images/mysql_01.jpg)
 
 ```
-  docker run -ti --name mysql_test -e MYSQL_ROOT_PASSWORD=123456 -p3306:3306 -idt java110/docker-mysql:latest
+  docker run -ti --name mysql_test -e MYSQL_ROOT_PASSWORD=123456 -p3326:3306 -idt java110/docker-mysql:latest
 
   docker logs -f mysql_test
 
