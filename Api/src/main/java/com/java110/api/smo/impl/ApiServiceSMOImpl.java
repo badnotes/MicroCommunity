@@ -92,7 +92,7 @@ public class ApiServiceSMOImpl extends LoggerEngine implements IApiServiceSMO {
             initConfigData(dataFlow);
 
             //3.0 校验 APPID是否有权限操作serviceCode
-            judgeAuthority(dataFlow);
+            // judgeAuthority(dataFlow);
 
             //6.0 调用下游系统
             invokeBusinessSystem(dataFlow);
